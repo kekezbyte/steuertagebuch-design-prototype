@@ -18,37 +18,69 @@ const { banner, features } = homepage.data;
   <!-- Banner -->
   <section class="section pt-14">
     <div class="container">
-      <div class="row justify-center">
-        <div class="lg:col-7 md:col-9 mb-8 text-center">
-          <h1
-            set:html={markdownify(banner.title)}
-            class="mb-4 text-h3 lg:text-h1"
-          />
-          <p set:html={markdownify(banner.content)} class="mb-8" />
-          {
-            banner.button.enable && (
-              <a
-                class="btn btn-primary"
-                href={banner.button.link}
-                target={
-                  banner.button.link.startsWith("http") ? "_blank" : "_self"
-                }
-                rel="noopener"
-              >
-                {banner.button.label}
-              </a>
-            )
-          }
+      <div class="row items-stretch justify-between">
+        <div class="mb-8 lg:col-5 lg:mb-0">
+          <div
+            class="flex h-full flex-col justify-center rounded-[28px] px-8 py-12 text-white md:px-10 lg:px-12 lg:py-14"
+            style="background: linear-gradient(135deg, #4f3cf6 0%, #7b2ff7 55%, #cf45bd 100%);"
+          >
+            {
+              banner.eyebrow && (
+                <p class="mb-6 text-sm font-semibold uppercase tracking-wider">
+                  {banner.eyebrow}
+                </p>
+              )
+            }
+            <h1
+              set:html={markdownify(banner.title)}
+              class="mb-4 text-h3 text-white dark:text-white lg:text-h1"
+            />
+            {
+              banner.highlight && (
+                <div
+                  class="mb-6 rounded-lg px-3 py-2 text-text-dark"
+                  style="background-color: #fff04a;"
+                >
+                  <h2
+                    set:html={markdownify(banner.highlight)}
+                    class="text-h3 text-text-dark dark:text-text-dark lg:text-h1"
+                  />
+                </div>
+              )
+            }
+            <p set:html={markdownify(banner.content)} class="mb-8" />
+            {
+              banner.button.enable && (
+                <div>
+                  <a
+                    class="btn"
+                    style="background-color: #fff04a; color: #040404;"
+                    href={banner.button.link}
+                    target={
+                      banner.button.link.startsWith("http") ? "_blank" : "_self"
+                    }
+                    rel="noopener"
+                  >
+                    {banner.button.label}
+                    <span aria-hidden="true" class="ml-3">
+                      →
+                    </span>
+                  </a>
+                </div>
+              )
+            }
+          </div>
         </div>
         {
           banner.image && (
-            <div class="col-12">
+            <div class="flex items-center lg:col-7">
               <ImageMod
                 src={banner.image}
-                height={380}
-                width={1200}
-                alt="banner"
+                height={775}
+                width={905}
+                alt="SteuerTagebuch Übersicht mit Kalender, Aufgaben und Fahrten"
                 format="webp"
+                class="w-full"
               />
             </div>
           )
