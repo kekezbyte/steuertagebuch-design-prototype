@@ -78,7 +78,9 @@ const homepageCollection = defineCollection({
   loader: glob({ pattern: "**/-*.{md,mdx}", base: "src/content/homepage" }),
   schema: z.object({
     banner: z.object({
+      eyebrow: z.string().optional(),
       title: z.string(),
+      highlight: z.string().optional(),
       content: z.string(),
       image: z.string(),
       button: z.object({
