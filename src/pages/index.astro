@@ -33,7 +33,7 @@ const { banner, features } = homepage.data;
             }
             <h1
               set:html={markdownify(banner.title)}
-              class="mb-4 text-h3 text-white lg:text-h1"
+              class="mb-4 text-h3 text-white dark:text-white lg:text-h1"
             />
             {
               banner.highlight && (
@@ -43,7 +43,7 @@ const { banner, features } = homepage.data;
                 >
                   <h2
                     set:html={markdownify(banner.highlight)}
-                    class="text-h3 lg:text-h1"
+                    class="text-h3 text-text-dark dark:text-text-dark lg:text-h1"
                   />
                 </div>
               )

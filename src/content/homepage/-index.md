@@ -5,7 +5,7 @@ banner:
   title: "Steuern machen ist sinnvoll."
   highlight: "Tracken macht es einfach."
   content: "Dokumentiere Homeoffice, Arbeitsorte, Dienstreisen, Familienheimfahrten und deine Zweitwohnung – damit du bei der Steuererklärung nicht mehr überlegen musst, was im Januar eigentlich war."
-  image: "/images/steuertagebuch-laptop-variante-3.jpg"
+  image: "/images/steuertagebuch-laptop-variante-3.png"
   button:
     enable: true
     label: "Jetzt dokumentieren"
